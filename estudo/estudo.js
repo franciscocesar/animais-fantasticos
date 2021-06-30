@@ -196,12 +196,89 @@
 //     }
 // }
 
-function Pessoa(nome, idade){
-    this.nome = nome
-    this.idade = idade
-}
-Pessoa.prototype.andar = function(){
-    return 'pessoa andou'
-}
-const andre = new Pessoa('Francisco', 19)
-console.log(Pessoa.prototype)
+// function Pessoa(nome, idade){
+//     this.nome = nome
+//     this.idade = idade
+// }
+// Pessoa.prototype.andar = function(){
+//     return 'pessoa andou'
+// }
+// const andre = new Pessoa('Francisco', 19)
+// console.log(Pessoa.prototype)
+
+
+const comida = 'Pizza';
+const agua = new String('Água')
+
+console.log(comida.length) // 6
+console.log(agua.length)// 4
+
+comida.charAt(0) // P
+comida.charAt(1) // i
+
+comida.includes(Pizza); //true
+comida.includes(Mar); //false
+
+comida.startsWith("Pi") // True
+comida.endssWith("za") // True
+
+comida.slice(0, 3) // piz
+comida.slice(0, 4) // pizz
+comida.slice(-2)  //za
+
+comida.indexOf("P") // 0
+comida.indexOf("i") // 1
+
+const listaAlimentos = ['Feijão', 'Batata', 'Vinagra', 'Sal']
+listaAlimentos.forEach((preco) => {
+    console.log(preco.padStart(10, '.'))
+})
+
+listaAlimentos[1]. padStart(10, '.')// ......... Feijão
+listaAlimentos[1]. padEnd(10, '.')// Feijão .............
+
+const frase = 'Oi'
+
+frase.repeat(5) // OiOiOiOiOi
+
+const sexo = 'Femenino'
+
+sexo1.toLowerCase() // FEMENINO
+
+const valor = ' R$ 23,00 '
+valor.trim(); // '23,00'
+valor.trimStart(); // '23,00   '
+valor.trimEnd(); // '   23,00'
+
+// Number
+
+
+Number.isNaN(NaN) // True
+Number.isNaN(5) // False
+Number.isInteger(20) // true
+Number.isInteger(20.2) // false
+
+parseFloat('99.50'); // Mesma função sem o Number
+Number.parseFloat('99.50'); // 99.5
+Number.parseFloat('100 Reais'); // 100
+Number.parseFloat('R$ 100'); // NaN
+
+parseInt('99.50', 10); // 99
+parseInt(5.43434355555, 10); // 5
+Number.parseInt('100 Reais', 10); // 100
+
+const preco = 2.99;
+preco.toFixed(); // 3
+
+const carro = 1000.455;
+carro.toFixed(2) // 1000.46
+
+const preco2 = 1499.49;
+preco2.toFixed() // 1499
+
+const preco = 59.49;
+preco.toLocaleString('en-US', {style: 'currency', currency: 'USD'}); // $59.49
+preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}); // R$ 59,49
+
+Math.floor(Math.random() * 100)
+ 
